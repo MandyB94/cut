@@ -1,0 +1,8 @@
+File Edit Options Buffers Tools Help                                            
+find . -name thisfile.txt
+        find in current and all sub directory
+
+find /home -name *.jpg
+        find in /home and all sub directory
+
+find / -type f -name *.txt
